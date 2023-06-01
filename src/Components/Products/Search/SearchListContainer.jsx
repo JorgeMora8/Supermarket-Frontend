@@ -11,11 +11,9 @@ const SearchListContainer = ({productName, goBack}) => {
 
 
   useEffect(()=> { 
-    axios.get(`http://localhost:8080/api/products/search/${productName}`)
+    axios.get(`https://supermarket-api-iz37.onrender.com/api/products/search/${productName}`)
     .then((resp) => resp.data)
-    .then((resp) => {
-      console.log(resp);
-      setProduct(resp)})
+    .then((resp) => setProduct(resp))
     .then((resp) => setLoading(false))
     .catch((error) => console.log(error))
   }, [productName])

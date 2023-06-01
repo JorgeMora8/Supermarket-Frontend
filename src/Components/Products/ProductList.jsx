@@ -27,7 +27,6 @@ const ProductList = ({category}) => {
     }
   }, [category])
 
-  console.log(products)
 
   return (
     <>
